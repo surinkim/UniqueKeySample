@@ -79,6 +79,10 @@ auto GetUniqueInfo = [&](WCHAR* query, WCHAR* prop, wstring& value) -> bool
 			value = vRet.bstrVal;
 			VariantClear(&vRet);
 		}
+		else
+		{
+			std::wcout << "Get " << prop << " failed." << endl;
+		}
 
 		clsObj->Release();
 	}
